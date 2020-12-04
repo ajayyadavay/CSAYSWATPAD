@@ -1,0 +1,20 @@
+	1	OBJECTID	
+	2	STATION	
+	3	WLATITUDE	
+	4	WLONGITUDE	
+	5	WELEV	
+	6	RAIN_YRS	
+7	18	TMPMXi	avg for each months
+19	30	TMPMNi	avg for each months
+31	42	TMPSTDMXi	stddev of each month
+43	54	TMPSTDMNi	stddev of each month
+55	66	PCPMMi	avg for each months
+67	78	PCPSTDi	stddev of each month
+79	90	PCPSKWi	skewness for each months
+91	102	PR_W1_i	
+103	114	PR_W2_i	
+115	126	PCPDi	
+127	138	RAINHHMXi	
+139	150	SOLARAVi	avg for each months
+151	162	DEWPTi	
+163	174	WNDAVi	avg for each months

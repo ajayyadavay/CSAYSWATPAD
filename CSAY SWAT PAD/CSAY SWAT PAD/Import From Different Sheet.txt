@@ -1,0 +1,141 @@
+ private void Button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = @"F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\Example Station Data1.xlsx";
+                Excel.Application app = new Excel.Application();
+                Excel.Workbooks workbooks = app.Workbooks;
+
+                Excel.Workbook workbook = workbooks.Open(path);
+                //Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+                dataGridViewMusking.Rows.Add();
+                dataGridViewMusking.Rows.Add();
+                dataGridViewMusking.Rows.Add();
+                dataGridViewMusking.Rows.Add();
+                j = 0;
+                foreach (Excel.Worksheet worksheet in workbook.Worksheets)
+                {
+                    MessageBox.Show(worksheet.Name.ToString());
+                    for(i=0; i<3; i++)
+                    {
+                        dataGridViewMusking.Rows[i].Cells[j].Value = worksheet.Cells[i + 2, 1].value;
+                    }
+                    Marshal.ReleaseComObject(worksheet);
+                    j++;
+                }
+
+                //worksheet.cells[rows, column].value; here rows column starts from 1 and rows starts from 1 of excel.
+
+                workbook.Close();
+                //app.Quit();
+                Marshal.ReleaseComObject(workbook);
+                Marshal.ReleaseComObject(workbooks);
+                app.Quit();
+                //Marshal.ReleaseComObject(worksheet);
+            }
+            catch
+            {
+
+            }
+            
+        }
+
+
+====================================================================================================================================================================
+  private void ImportDailyDataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ColStIndex = 0, CountSheet = 0;
+                TotalStations = Convert.ToInt32(TxtNoOfStation.Text);
+
+                OpenFileDialog openfiledialog1 = new OpenFileDialog();
+                openfiledialog1.Filter = "Excel Sheet(*.xlsx)|*.xlsx|Excel Sheet(*.xls)|*.xls|All Files(*.*)|*.*";
+                openfiledialog1.FilterIndex = 1;
+
+                if (openfiledialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                {
+                    path = openfiledialog1.FileName;
+                }
+                else if (openfiledialog1.ShowDialog() == System.Windows.Forms.DialogResult.Cancel) return;
+
+                dataGridViewMusking.DataSource = null;
+
+               /* for (int j = 0; j < dataGridViewMusking.Rows.Count - 1; j++)
+                {
+                    dataGridViewMusking.Rows.RemoveAt(j);
+                    j--;
+                    while (dataGridViewMusking.Rows.Count == 0)
+                        continue;
+                }*/
+                //string path = @"F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\Example Station Data1.xlsx";
+                Excel.Application app = new Excel.Application();
+                Excel.Workbooks workbooks = app.Workbooks;
+
+                Excel.Workbook workbook = workbooks.Open(path,Type.Missing,true);
+                //Excel.Worksheet worksheet = workbook.ActiveSheet;
+
+                //dataGridViewMusking.Rows.Add();
+                //dataGridViewMusking.Rows.Add();
+                //dataGridViewMusking.Rows.Add();
+                //dataGridViewMusking.Rows.Add();
+
+                //j = 2;
+                /* for(i = 0; i < TotalNumberofDailyData; i++)
+                 {
+                     dataGridViewMusking.Rows.Add();
+                 }*/
+                TxtLog.Text = DateTime.Now.ToString("hh:mm:ss") + " ==>  Starting Data Import...Please Wait...";
+                TxtLog.AppendText(Environment.NewLine);
+                Application.DoEvents();
+                foreach (Excel.Worksheet worksheet in workbook.Worksheets)
+                {
+                    CountSheet++;
+                    if(CountSheet <= TotalStations)
+                    {
+                        // MessageBox.Show("Importing From Sheet: " + worksheet.Name.ToString(), "Import Daily Data...");
+                        TxtLog.AppendText(DateTime.Now.ToString("hh:mm:ss")+" ==>  Importing From Sheet:  " + worksheet.Name.ToString());
+                        TxtLog.AppendText(Environment.NewLine);
+
+                        dataGridViewStation.Rows[CountSheet-1].Cells[1].Value = worksheet.Cells[2, 2].value; //Station name
+                        dataGridViewStation.Rows[CountSheet - 1].Cells[2].Value = worksheet.Cells[3, 2].value; //Wlatitude
+                        dataGridViewStation.Rows[CountSheet - 1].Cells[3].Value = worksheet.Cells[4, 2].value; //WLongitude
+                        dataGridViewStation.Rows[CountSheet - 1].Cells[4].Value = worksheet.Cells[5, 2].value; //WElevation
+                        dataGridViewStation.Rows[CountSheet - 1].Cells[5].Value = worksheet.Cells[7, 2].value; //Rain_Yrs.
+                        for (i = 0; i < TotalNumberofDailyData; i++)
+                        {
+                            //dataGridViewMusking.Rows.Add();
+                            for (int j = 0; j < EachStationColumn; j++) // EachStationColumn = 7 is used for 7 heading: pcp, tmpmx, tmpmn, solar, rh, wind, dewtemp
+                            {
+                                dataGridViewMusking.Rows[i].Cells[j + 2 + ColStIndex].Value = worksheet.Cells[i + 10, j + 1].value; // add 2 to j to account for column "Year" and "Day"
+
+                            }
+                        }
+                        //Marshal.ReleaseComObject(worksheet);
+                        //j++;
+                        ColStIndex += EachStationColumn;
+                    }
+                    Marshal.ReleaseComObject(worksheet);
+                }
+
+                //worksheet.cells[rows, column].value; here rows column starts from 1 and rows starts from 1 of excel.
+
+                workbook.Close();
+                //app.Quit();
+                Marshal.ReleaseComObject(workbook);
+                Marshal.ReleaseComObject(workbooks);
+                app.Quit();
+                //Marshal.ReleaseComObject(worksheet);
+
+                //MessageBox.Show("Data import Completed Successfully", "Import Daily Data...");
+                TxtLog.AppendText(DateTime.Now.ToString("hh:mm:ss") + " ==>  Data import Completed Successfully");
+                TxtLog.AppendText(Environment.NewLine);
+                TxtLog.AppendText("-------------------------------------------------------------------------------");
+                TxtLog.AppendText(Environment.NewLine);
+            }
+            catch
+            {
+
+            }
+        }

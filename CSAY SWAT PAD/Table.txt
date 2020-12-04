@@ -1,0 +1,12 @@
+CREATE TABLE "SWAT_Parameters" (
+	"ID"	INTEGER PRIMARY KEY AUTOINCREMENT,
+	"Method"	TEXT,
+	"Name"	TEXT,
+	"File"	TEXT,
+	"Definition"	TEXT,
+	"Min"	REAL,
+	"Max"	REAL,
+	"Default"	REAL,
+	"Variable"	TEXT,
+	"Remarks"	TEXT
+);

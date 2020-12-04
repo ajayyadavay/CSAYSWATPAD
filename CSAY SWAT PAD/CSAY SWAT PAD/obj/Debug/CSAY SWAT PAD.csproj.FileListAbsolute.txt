@@ -1,0 +1,26 @@
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.csprojAssemblyReference.cache
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.Properties.Resources.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.csproj.GenerateResource.cache
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.csproj.CoreCompileInputs.cache
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\CSAY SWAT PAD.exe.config
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\CSAY SWAT PAD.exe
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\CSAY SWAT PAD.pdb
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmWeatherGenInput.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmMain.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.exe
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.pdb
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmTheissenPolygonCalc.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmParameters.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\EntityFramework.dll
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\EntityFramework.SqlServer.dll
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\System.Data.SQLite.dll
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\System.Data.SQLite.EF6.dll
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\System.Data.SQLite.Linq.dll
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\EntityFramework.xml
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\EntityFramework.SqlServer.xml
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\System.Data.SQLite.xml
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\bin\Debug\System.Data.SQLite.dll.config
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY SWAT PAD.csproj.CopyComplete
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmIterationRecords.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmAbout.resources
+F:\AY\VS_2017\C#\Temp\CSAY SWAT PAD\CSAY SWAT PAD\obj\Debug\CSAY_SWAT_PAD.FrmSetting.resources

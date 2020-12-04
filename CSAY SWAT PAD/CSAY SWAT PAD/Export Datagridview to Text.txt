@@ -1,0 +1,59 @@
+Source Code:
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+
+namespace WindowsFormsApplication1
+{
+    public partial class Datagridview_to_txt_file : Form
+    {
+        public Datagridview_to_txt_file()
+        {
+            InitializeComponent();
+        }
+
+        private void Datagridview_to_txt_file_Load(object sender, EventArgs e)
+        {
+            DataTable table = new DataTable();
+            table.Columns.Add("ID", typeof(int));
+            table.Columns.Add("First Name",typeof(string));
+            table.Columns.Add("Last Name",typeof(string));
+            table.Columns.Add("Age",typeof(int));
+
+            table.Rows.Add(1, "First A", "Last A", 10);
+            table.Rows.Add(2, "First B", "Last B", 20);
+            table.Rows.Add(3, "First C", "Last C", 30);
+            table.Rows.Add(4, "First D", "Last D", 40);
+            table.Rows.Add(5, "First E", "Last E", 50);
+            table.Rows.Add(6, "First F", "Last F", 60);
+            table.Rows.Add(7, "First G", "Last G", 70);
+            table.Rows.Add(8, "First H", "Last H", 80);
+            table.Rows.Add(9, "First I", "Last I", 90);
+
+            dataGridView1.DataSource = table;
+        }
+
+        private void BTN_EXPORT_Click(object sender, EventArgs e)
+        {
+            TextWriter writer = new StreamWriter(@"C:\folder\Text.txt");
+            for(int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            {
+                for(int j = 0; j < dataGridView1.Columns.Count; j++)
+                {
+                    writer.Write("\t"+dataGridView1.Rows[i].Cells[j].Value.ToString()+"\t"+"|");
+                }
+                writer.WriteLine("");
+                writer.WriteLine("-----------------------------------------------------");
+            }
+            writer.Close();
+            MessageBox.Show("Data Exported");
+        }
+    }
+}
